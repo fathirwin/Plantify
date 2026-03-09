@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Plantify - Form Input & Tabel</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="topbar">
+    <div class="container inner">
+      <div class="brand">Plantify</div>
+      <nav class="nav">
+        <a href="index.html">Home</a>
+        <a href="admin-dashboard.html">Admin</a>
+        <a href="user-dashboard.html">User</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container section">
+    <h1>Form Input Text & Tabel Data Resep</h1>
+    <p class="soft">Halaman contoh komponen form HTML dan tabel CSS.</p>
+
+    <section class="block" style="margin-top:18px;">
+      <h3>Form Tambah Resep</h3>
+      <form class="form-layout">
+        <div class="field"><label>Nama Resep</label><input type="text" placeholder="Masukkan nama resep" /></div>
+        <div class="field"><label>Kategori</label><input type="text" placeholder="Breakfast / Lunch / Dinner" /></div>
+        <div class="field"><label>Kalori</label><input type="text" placeholder="Contoh: 420 kcal" /></div>
+        <div class="field"><label>Durasi</label><input type="text" placeholder="Contoh: 25 menit" /></div>
+        <div class="field full"><label>Deskripsi</label><textarea rows="4" placeholder="Tulis deskripsi singkat resep"></textarea></div>
+        <div class="field full"><button class="btn btn-accent" type="button">Simpan Data</button></div>
+      </form>
+    </section>
+
+    <section class="block" style="margin-top:16px;">
+      <h3>Tabel Data</h3>
+      <table>
+        <thead>
+          <tr>
+            <th>No</th>
+            <th>Nama Resep</th>
+            <th>Kategori</th>
+            <th>Kalori</th>
+            <th>Durasi</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>1</td><td>Golden Lentil Soup</td><td>Lunch</td><td>350</td><td>30 menit</td></tr>
+          <tr><td>2</td><td>Spicy Tofu Stir Fry</td><td>Dinner</td><td>420</td><td>25 menit</td></tr>
+          <tr><td>3</td><td>Avocado Buddha Bowl</td><td>Breakfast</td><td>390</td><td>20 menit</td></tr>
+        </tbody>
+      </table>
+    </section>
+  </main>
+</body>
+</html>

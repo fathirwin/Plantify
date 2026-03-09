@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Plantify - Admin Dashboard</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="panel">
+    <aside class="sidebar">
+      <div class="brand" style="font-size:34px;">Plantify</div>
+      <span class="soft">ADMIN PANEL</span>
+      <a class="side-link active" href="#">Dashboard</a>
+      <a class="side-link" href="#">Recipes</a>
+      <a class="side-link" href="#">Subscriptions</a>
+      <a class="side-link" href="index.html">Back to Site</a>
+    </aside>
+
+    <main class="content">
+      <h1 style="font-size:52px;margin:0 0 8px;">Dashboard</h1>
+      <p class="soft">Overview of recipe performance and users.</p>
+
+      <section class="stat-grid">
+        <article class="stat-box"><p class="soft">TOTAL RECIPES</p><h2>16</h2></article>
+        <article class="stat-box"><p class="soft">TOTAL VIEWS</p><h2>2,746</h2></article>
+        <article class="stat-box"><p class="soft">WATER SAVED</p><h2>5,550L</h2></article>
+        <article class="stat-box"><p class="soft">CO2 REDUCED</p><h2>27.8kg</h2></article>
+      </section>
+
+      <section class="split">
+        <div class="block">
+          <h3>Data Resep Terbaru (Tabel)</h3>
+          <table>
+            <thead>
+              <tr>
+                <th>Nama Resep</th>
+                <th>Kategori</th>
+                <th>Views</th>
+                <th>Status</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><td>Spicy Tofu Stir Fry</td><td>Dinner</td><td>320</td><td>Published</td></tr>
+              <tr><td>Golden Lentil Soup</td><td>Lunch</td><td>275</td><td>Published</td></tr>
+              <tr><td>Creamy Avocado Bowl</td><td>Breakfast</td><td>260</td><td>Draft</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="block">
+          <h3>Input Cepat</h3>
+          <div class="field"><label>Nama Resep</label><input type="text" placeholder="Contoh: Green Smoothie Bowl"></div>
+          <div class="field"><label>Kategori</label><input type="text" placeholder="Breakfast"></div>
+          <div class="field"><label>Estimasi Waktu</label><input type="text" placeholder="20 menit"></div>
+          <button class="btn btn-accent" style="width:100%;margin-top:12px;">Simpan</button>
+        </div>
+      </section>
+    </main>
+  </div>
+</body>
+</html>
