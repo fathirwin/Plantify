@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Plantify - Admin Chat</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="panel">
+    <aside class="sidebar">
+      <div class="brand" style="font-size:34px;">Plantify</div>
+      <span class="soft" style="font-size: 13px; letter-spacing: 1px;">ADMIN PANEL</span>
+      
+      <div style="margin-top: 16px; display: flex; flex-direction: column; gap: 8px; height: 100%;">
+        <a class="side-link" href="admin-dashboard.html">Account</a>
+        <a class="side-link" href="admin-dashboard-recipes.html">Recipes</a>
+        <a class="side-link" href="admin-dashboard-subscription.html">Subscriptions</a>
+        <a class="side-link active" href="admin-dashboard-chat.html">Chat</a>
+        <a class="side-link" href="index.html">Back to Home</a>
+        
+        <a class="side-link" style="margin-top: auto; color: var(--accent);" href="login.html">
+          <strong>Logout</strong>
+        </a>
+      </div>
+    </aside>
+
+    <main class="content">
+      <p style="letter-spacing:1.5px; color:var(--accent); font-weight:700; margin-bottom: 0;">CONSULTATION</p>
+      <h1 style="font-size:52px; margin-top:6px; margin-bottom: 24px;">Messages</h1>
+
+      <div class="block" style="display: flex; flex-direction: column; height: 72vh; padding: 0; overflow: hidden;">
+        
+        <div style="padding: 20px; border-bottom: 1px solid var(--line); display: flex; align-items: center; gap: 16px; background: #fff;">
+          <div style="width: 52px; height: 52px; border-radius: 50%; background: #ccd7e2; color: #333; display: grid; place-items: center; font-weight: bold; font-size: 20px;">
+            JD
+          </div>
+          <div>
+            <h3 style="margin: 0; font-size: 20px;">Sugeng</h3>
+            <p class="soft" style="margin: 4px 0 0; font-size: 14px;">Pro User • Flexitarian Diet</p>
+          </div>
+        </div>
+
+        <div style="flex: 1; overflow-y: auto; padding: 24px; display: flex; flex-direction: column; gap: 20px; background: var(--bg);">
+          
+          <div style="align-self: flex-end; background: var(--primary); color: #fff; padding: 16px 20px; border-radius: 20px 0 20px 20px; box-shadow: var(--shadow); max-width: 75%;">
+            <p style="margin: 0; line-height: 1.6;">Halo! Saya Dr. Sugeng. Ada yang bisa saya bantu dengan jadwal makan <em>plant-based</em> kamu minggu ini?</p>
+            <span style="color: #d4e7dd; font-size: 11px; display: block; margin-top: 8px; text-align: right;">10:00 AM</span>
+          </div>
+
+          <div style="align-self: flex-start; background: var(--surface); padding: 16px 20px; border-radius: 0 20px 20px 20px; box-shadow: var(--shadow); max-width: 75%;">
+            <p style="margin: 0; line-height: 1.6;">Pagi Dok, saya baru mulai diet vegan tapi merasa cepat lapar. Ada saran camilan yang mengenyangkan?</p>
+            <span class="soft" style="font-size: 11px; display: block; margin-top: 8px;">10:05 AM</span>
+          </div>
+
+        </div>
+
+        <div style="padding: 20px; background: var(--surface); border-top: 1px solid var(--line);">
+          <div style="display: flex; gap: 12px;">
+            <input type="text" placeholder="Balas pesan Jane..." style="flex: 1; border: 1px solid #ccd7e2; border-radius: 99px; padding: 14px 24px; font-size: 16px; outline: none;" />
+            <button class="btn btn-primary" style="padding: 14px 32px;">Kirim</button>
+          </div>
+        </div>
+
+      </div>
+    </main>
+  </div>
+</body>
+</html>
