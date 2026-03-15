@@ -3,56 +3,91 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Plantify - User Dashboard</title>
+  <title>Plantify - Account Settings</title>
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-  <header class="topbar">
-    <div class="container inner">
-      <div class="brand">Plantify</div>
-      <nav class="nav">
-        <a href="index.html">Home</a>
-        <a href="form-table.html">Form</a>
-        <a class="btn btn-accent" href="login.html">Logout</a>
-      </nav>
-    </div>
-  </header>
-
-  <main class="container section">
-    <p style="letter-spacing:1.5px;color:#dd7f5f;font-weight:700;">YOUR SCHEDULE</p>
-    <h1 style="font-size:58px;margin-top:6px;">Weekly Meal Planner</h1>
-
-    <section class="stat-grid" style="margin-bottom:16px;">
-      <article class="stat-box"><h2>630L</h2><p class="soft">Water Saved this week</p></article>
-      <article class="stat-box"><h2>3.2kg</h2><p class="soft">CO2 Reduced this week</p></article>
-      <article class="stat-box"><h2>0.1</h2><p class="soft">Trees Equivalent / year</p></article>
-      <article class="stat-box"><h2>7</h2><p class="soft">Meal Plan Days</p></article>
-    </section>
-
-    <section class="split">
-      <div class="block">
-        <h3>Jadwal Makan Mingguan</h3>
-        <table>
-          <thead><tr><th>Hari</th><th>Breakfast</th><th>Lunch</th><th>Dinner</th></tr></thead>
-          <tbody>
-            <tr><td>Senin</td><td>Oatmeal Fruit Bowl</td><td>Quinoa Salad</td><td>Spicy Tofu Stir Fry</td></tr>
-            <tr><td>Selasa</td><td>Chia Pudding</td><td>Lentil Soup</td><td>Mushroom Pasta</td></tr>
-            <tr><td>Rabu</td><td>Green Smoothie</td><td>Chickpea Wrap</td><td>Veggie Curry</td></tr>
-          </tbody>
-        </table>
+  <div class="panel">
+    <aside class="sidebar">
+      <div class="brand" style="font-size:34px;">Plantify</div>
+      <span class="soft" style="font-size: 13px; letter-spacing: 1px;">USER PANEL</span>
+      
+      <div style="margin-top: 16px; display: flex; flex-direction: column; gap: 8px; height: 100%;">
+        <a class="side-link active" href="user-dashboard.html">Account</a>
+        <a class="side-link" href="user-dashboard-Meal-Planner.html">Meal Planner</a>
+        <a class="side-link" href="user-dashboard-chat.html">Consultation</a>
+        <a class="side-link" href="index.html">Back to Home</a>
+        
+        <a class="side-link" style="margin-top: auto; color: var(--accent);" href="login.html">
+          <strong>Logout</strong>
+        </a>
       </div>
-      <div class="block">
-        <h3>Grocery List</h3>
-        <ul style="padding-left:20px;line-height:1.9;">
-          <li>Firm tofu - 400g</li>
-          <li>Bell peppers - 2 pcs</li>
-          <li>Broccoli - 2 cups</li>
-          <li>Jasmine rice - 1.5 cups</li>
-          <li>Soy sauce - 3 sdm</li>
-        </ul>
-        <button class="btn btn-primary" style="width:100%;">Print</button>
-      </div>
-    </section>
-  </main>
+    </aside>
+
+    <main class="content">
+      <p style="letter-spacing:1.5px; color:var(--accent); font-weight:700; margin-bottom: 0;">YOUR PROFILE</p>
+      <h1 style="font-size:52px; margin-top:6px; margin-bottom: 24px;">Account Settings</h1>
+
+      <section class="split">
+        
+        <div class="block">
+          <h3>Profile Information</h3>
+          <p class="soft" style="margin-top: -10px; margin-bottom: 20px;">Perbarui data diri dan preferensi diet kamu di sini.</p>
+          
+          <form class="form-layout">
+            <div class="field full">
+              <label>Nama Lengkap</label>
+              <input type="text" value="Sugeng" />
+            </div>
+            
+            <div class="field full">
+              <label>Alamat Email</label>
+              <input type="email" value="sugenk@gmail.com" />
+            </div>
+            
+            <div class="field full">
+              <label>Preferensi Diet</label>
+              <select>
+                <option value="vegan">Vegan (100% Plant-based)</option>
+                <option value="vegetarian" selected>Vegetarian (Includes dairy/eggs)</option>
+                <option value="flexitarian">Flexitarian (Mostly plant-based)</option>
+              </select>
+            </div>
+            
+            <div class="field full" style="margin-top: 10px;">
+              <button class="btn btn-primary" type="button">Simpan Perubahan</button>
+            </div>
+          </form>
+        </div>
+
+        <div style="display: flex; flex-direction: column; gap: 16px;">
+          
+          <div class="block">
+            <h3>Change Password</h3>
+            <form class="form-layout">
+              <div class="field full">
+                <label>Password Saat Ini</label>
+                <input type="password" placeholder="••••••••" />
+              </div>
+              <div class="field full">
+                <label>Password Baru</label>
+                <input type="password" placeholder="••••••••" />
+              </div>
+              <div class="field full" style="margin-top: 8px;">
+                <button class="btn btn-primary" type="button" style="width: 100%;">Update Password</button>
+              </div>
+            </form>
+          </div>
+
+          <div class="block" style="border: 1px solid #f8c8c8; background: #fffcfc;">
+            <h3 style="color: #bd2c2c; margin-top: 0;">Danger Zone</h3>
+            <p class="soft" style="font-size: 14px; margin-bottom: 16px;">Jika kamu menghapus akun, semua data jadwal makan dan resep favoritmu akan hilang permanen.</p>
+            <button class="btn" style="background: #fff0f0; color: #bd2c2c; width: 100%; border: 1px solid #f8c8c8;">Delete Account</button>
+          </div>
+
+        </div>
+      </section>
+    </main>
+  </div>
 </body>
 </html>

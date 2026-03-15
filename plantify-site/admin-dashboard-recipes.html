@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Plantify - Manage Recipes</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="panel">
+    <aside class="sidebar">
+      <div class="brand" style="font-size:34px;">Plantify</div>
+      <span class="soft" style="font-size: 13px; letter-spacing: 1px;">ADMIN PANEL</span>
+      
+      <div style="margin-top: 16px; display: flex; flex-direction: column; gap: 8px; height: 100%;">
+        <a class="side-link" href="admin-dashboard.html">Account</a>
+        <a class="side-link active" href="admin-dashboard-recipes.html">Recipes</a>
+        <a class="side-link" href="admin-dashboard-subscription.html">Subscriptions</a>
+        <a class="side-link" href="admin-dashboard-chat.html">Chat</a>
+        <a class="side-link" href="index.html">Back to Home</a>
+        
+        <a class="side-link" style="margin-top: auto; color: var(--accent);" href="login.html">
+          <strong>Logout</strong>
+        </a>
+      </div>
+    </aside>
+
+    <main class="content">
+      <p style="letter-spacing:1.5px; color:var(--accent); font-weight:700; margin-bottom: 0;">CONTENT MANAGEMENT</p>
+      <h1 style="font-size:52px; margin-top:6px; margin-bottom: 24px;">Manage Recipes</h1>
+
+      <section class="split" style="margin-bottom: 24px;">
+        <div class="block">
+          <h3>Add New Recipe</h3>
+          <form class="form-layout">
+            <div class="field full">
+              <label>Recipe Name</label>
+              <input type="text" placeholder="e.g. Vegan Lasagna" />
+            </div>
+            <div class="field">
+              <label>Calories (kcal)</label>
+              <input type="number" placeholder="400" />
+            </div>
+            <div class="field">
+              <label>Time (min)</label>
+              <input type="number" placeholder="45" />
+            </div>
+            <div class="field full">
+              <label>Difficulty</label>
+              <select>
+                <option>Easy</option>
+                <option>Medium</option>
+                <option>Hard</option>
+              </select>
+            </div>
+            <div class="field full" style="margin-top: 8px;">
+              <button class="btn btn-primary" type="button">Publish Recipe</button>
+            </div>
+          </form>
+        </div>
+
+        <div class="block">
+          <h3>Add Category</h3>
+          <form class="form-layout">
+            <div class="field full">
+              <label>Category Name</label>
+              <input type="text" placeholder="e.g. High Protein" />
+            </div>
+            <div class="field full" style="margin-top: 8px;">
+              <button class="btn btn-outline-dark" type="button" style="width: 100%;">Add Category</button>
+            </div>
+          </form>
+          
+          <h4 style="margin-top: 24px; margin-bottom: 12px;">Existing Categories</h4>
+          <div class="tags">
+            <span class="tag">Lunch ✕</span>
+            <span class="tag">Dinner ✕</span>
+            <span class="tag">High Protein ✕</span>
+            <span class="tag">Gluten Free ✕</span>
+          </div>
+        </div>
+      </section>
+
+      <div class="block">
+        <h3>Recipe Database</h3>
+        <table>
+          <thead>
+            <tr>
+              <th>Recipe Name</th>
+              <th>Category</th>
+              <th>Calories</th>
+              <th>Action</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Creamy Avocado Bowl</td>
+              <td>Lunch, Gluten Free</td>
+              <td>480 kcal</td>
+              <td><a href="#" style="color: var(--primary); font-weight: bold; margin-right: 12px;">Edit</a> <a href="#" style="color: red;">Delete</a></td>
+            </tr>
+            <tr>
+              <td>Chocolate Avocado Mousse</td>
+              <td>Desserts</td>
+              <td>280 kcal</td>
+              <td><a href="#" style="color: var(--primary); font-weight: bold; margin-right: 12px;">Edit</a> <a href="#" style="color: red;">Delete</a></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </main>
+  </div>
+</body>
+</html>
