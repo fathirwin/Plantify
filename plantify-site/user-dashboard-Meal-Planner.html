@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Plantify - User Dashboard</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="panel">
+    <aside class="sidebar">
+      <div class="brand" style="font-size:34px;">Plantify</div>
+      <span class="soft" style="font-size: 13px; letter-spacing: 1px;">USER PANEL</span>
+      
+      <div style="margin-top: 16px; display: flex; flex-direction: column; gap: 8px; height: 100%;">
+        <a class="side-link" href="user-dashboard.html">Account</a>
+        <a class="side-link active" href="user-dashboard-Meal-Planner.html">Meal Planner</a>
+        <a class="side-link" href="user-dashboard-chat.html">Consultation</a>
+        <a class="side-link" href="index.html">Back to Home</a>
+        
+        <a class="side-link" style="margin-top: auto; color: var(--accent);" href="login.html">
+          <strong>Logout</strong>
+        </a>
+      </div>
+    </aside>
+
+    <main class="content">
+      <p style="letter-spacing:1.5px; color:var(--accent); font-weight:700; margin-bottom: 0;">YOUR SCHEDULE</p>
+      <h1 style="font-size:52px; margin-top:6px; margin-bottom: 24px;">Weekly Meal Planner</h1>
+
+      <section class="stat-grid" style="margin-bottom:24px;">
+        <article class="stat-box"><h2>630L</h2><p class="soft">Water Saved this week</p></article>
+        <article class="stat-box"><h2>3.2kg</h2><p class="soft">CO2 Reduced this week</p></article>
+        <article class="stat-box"><h2>0.1</h2><p class="soft">Trees Equivalent / year</p></article>
+        <article class="stat-box"><h2>7</h2><p class="soft">Meal Plan Days</p></article>
+      </section>
+
+      <section class="split">
+        <div class="block">
+          <h3>Jadwal Makan Mingguan</h3>
+          <table>
+            <thead>
+              <tr>
+                <th>Hari</th>
+                <th>Breakfast</th>
+                <th>Lunch</th>
+                <th>Dinner</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><td>Senin</td><td>Oatmeal Fruit Bowl</td><td>Quinoa Salad</td><td>Spicy Tofu Stir Fry</td></tr>
+              <tr><td>Selasa</td><td>Chia Pudding</td><td>Lentil Soup</td><td>Mushroom Pasta</td></tr>
+              <tr><td>Rabu</td><td>Green Smoothie</td><td>Chickpea Wrap</td><td>Veggie Curry</td></tr>
+              <tr><td>Kamis</td><td>Avocado Toast</td><td>Buddha Bowl</td><td>Sweet Potato Tacos</td></tr>
+            </tbody>
+          </table>
+        </div>
+        
+        <div class="block">
+          <h3>Grocery List</h3>
+          <ul style="padding-left:20px; line-height:1.9; color: var(--text);">
+            <li>Firm tofu - 400g</li>
+            <li>Bell peppers - 2 pcs</li>
+            <li>Broccoli - 2 cups</li>
+            <li>Jasmine rice - 1.5 cups</li>
+            <li>Soy sauce - 3 sdm</li>
+            <li>Avocado - 3 pcs</li>
+            <li>Rolled oats - 500g</li>
+          </ul>
+          <button class="btn btn-primary" style="width:100%; margin-top: 16px;">Print List</button>
+        </div>
+      </section>
+
+      <section class="block" style="margin-top:18px;">
+      <h3>Form Tambah Resep</h3>
+      <form class="form-layout">
+        <div class="field"><label>Nama Resep</label><input type="text" placeholder="Masukkan nama resep" /></div>
+        <div class="field"><label>Kategori</label><input type="text" placeholder="Breakfast / Lunch / Dinner" /></div>
+        <div class="field"><label>Kalori</label><input type="text" placeholder="Contoh: 420 kcal" /></div>
+        <div class="field"><label>Durasi</label><input type="text" placeholder="Contoh: 25 menit" /></div>
+        <div class="field full"><label>Deskripsi</label><textarea rows="4" placeholder="Tulis deskripsi singkat resep"></textarea></div>
+        <div class="field full"><button class="btn btn-accent" type="button">Simpan Data</button></div>
+      </form>
+    </section>
+    </main>
+  </div>
+</body>
+</html>

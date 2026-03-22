@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Plantify - Chat with Nutritionist</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="panel">
+    <aside class="sidebar">
+      <div class="brand" style="font-size:34px;">Plantify</div>
+      <span class="soft" style="font-size: 13px; letter-spacing: 1px;">USER PANEL</span>
+      
+      <div style="margin-top: 16px; display: flex; flex-direction: column; gap: 8px; height: 100%;">
+        <a class="side-link" href="user-dashboard.html">Account</a>
+        <a class="side-link" href="user-dashboard-Meal-Planner.html">Meal Planner</a>
+        <a class="side-link active" href="user-dashboard-chat.html">Consultation</a>
+        <a class="side-link" href="index.html">Back to Home</a>
+        
+        <a class="side-link" style="margin-top: auto; color: var(--accent);" href="login.html">
+          <strong>Logout</strong>
+        </a>
+      </div>
+    </aside>
+
+    <main class="content">
+      <p style="letter-spacing:1.5px; color:var(--accent); font-weight:700; margin-bottom: 0;">EXPERT SUPPORT</p>
+      <h1 style="font-size:52px; margin-top:6px; margin-bottom: 24px;">Nutritionist Chat</h1>
+
+      <div class="block" style="display: flex; flex-direction: column; height: 72vh; padding: 0; overflow: hidden;">
+        
+        <div style="padding: 20px; border-bottom: 1px solid var(--line); display: flex; align-items: center; gap: 16px; background: #fff;">
+          <div style="width: 52px; height: 52px; border-radius: 50%; background: var(--accent); color: white; display: grid; place-items: center; font-weight: bold; font-size: 20px; box-shadow: var(--shadow);">
+            SJ </div>
+          <div>
+            <h3 style="margin: 0; font-size: 20px;">Dr. Sumanto Dragon</h3>
+            <p class="soft" style="margin: 4px 0 0; font-size: 14px;">
+              <span style="display: inline-block; width: 8px; height: 8px; background: #4ade80; border-radius: 50%; margin-right: 4px;"></span>
+              Certified Plant-Based Nutritionist • Online
+            </p>
+          </div>
+        </div>
+
+        <div style="flex: 1; overflow-y: auto; padding: 24px; display: flex; flex-direction: column; gap: 20px; background: var(--bg);">
+          
+          <div style="align-self: flex-start; background: var(--surface); padding: 16px 20px; border-radius: 0 20px 20px 20px; box-shadow: var(--shadow); max-width: 75%;">
+            <p style="margin: 0; line-height: 1.6;">Halo! Saya Dr. Sumanto. Ada yang bisa saya bantu dengan jadwal makan <em>plant-based</em> kamu minggu ini?</p>
+            <span class="soft" style="font-size: 11px; display: block; margin-top: 8px;">10:00 AM</span>
+          </div>
+
+          <div style="align-self: flex-end; background: var(--primary); color: #fff; padding: 16px 20px; border-radius: 20px 0 20px 20px; box-shadow: var(--shadow); max-width: 75%;">
+            <p style="margin: 0; line-height: 1.6;">Pagi Dok, saya baru mulai diet vegan tapi merasa cepat lapar. Ada saran camilan yang mengenyangkan?</p>
+            <span style="color: #d4e7dd; font-size: 11px; display: block; margin-top: 8px; text-align: right;">10:05 AM</span>
+          </div>
+
+          <div style="align-self: flex-start; background: var(--surface); padding: 16px 20px; border-radius: 0 20px 20px 20px; box-shadow: var(--shadow); max-width: 75%;">
+            <p style="margin: 0; line-height: 1.6;">Tentu saja! Kamu bisa coba edamame rebus, hummus dengan potongan wortel, atau segenggam kacang almond. Mereka tinggi protein dan serat yang akan membuatmu kenyang lebih lama. <br><br>Mau saya tambahkan bahan-bahan itu ke <em>Grocery List</em> kamu?</p>
+            <span class="soft" style="font-size: 11px; display: block; margin-top: 8px;">10:08 AM</span>
+          </div>
+
+        </div>
+
+        <div style="padding: 20px; background: var(--surface); border-top: 1px solid var(--line);">
+          <div style="display: flex; gap: 12px;">
+            <input type="text" placeholder="Tulis pesanmu di sini..." style="flex: 1; border: 1px solid #ccd7e2; border-radius: 99px; padding: 14px 24px; font-size: 16px; outline: none; transition: border 0.3s;" onfocus="this.style.borderColor='var(--primary)'" onblur="this.style.borderColor='#ccd7e2'" />
+            <button class="btn btn-primary" style="padding: 14px 32px;">Kirim</button>
+          </div>
+        </div>
+
+      </div>
+    </main>
+  </div>
+</body>
+</html>
