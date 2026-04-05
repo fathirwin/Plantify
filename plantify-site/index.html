@@ -5,9 +5,22 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Plantify - Home Page</title>
   <link rel="stylesheet" href="styles.css" />
+  <style>
+    .recipe-card {
+      cursor: pointer;
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+    .recipe-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 14px 28px rgba(0,0,0,0.15);
+    }
+    .topbar {
+      transition: box-shadow 0.3s ease;
+    }
+  </style>
 </head>
 <body>
-  <header class="topbar">
+  <header class="topbar" id="mainTopbar">
     <div class="container inner">
       <div class="brand">Plantify</div>
       <nav class="nav">
@@ -24,13 +37,13 @@
   <section class="hero">
     <div class="container hero-grid">
       <div>
-        <p style="letter-spacing:2px;font-weight:700;opacity:.8;">100% PLANT BASED</p>
-        <h1>Plant-based living,<br/>simplified.</h1>
+        <p class="hero-subtitle">100% PLANT BASED</p>
+        <h1 class="hero-title">Plant-based living,<br/>simplified.</h1>
         <p>Temukan resep sehat berbasis nabati, susun jadwal mingguan, dan pantau dampak lingkungan dari pilihan makanmu.</p>
         <div class="stats">
-          <div class="stat"><strong>50+</strong><span>Resep</span></div>
-          <div class="stat"><strong>100 L</strong><span>Air di Hemat</span></div>
-          <div class="stat"><strong>10+</strong><span>Pengguna</span></div>
+          <div class="stat"><strong class="counter" data-target="50" data-suffix="+">0+</strong><span>Resep</span></div>
+          <div class="stat"><strong class="counter" data-target="100" data-suffix=" L">0 L</strong><span>Air di Hemat</span></div>
+          <div class="stat"><strong class="counter" data-target="10" data-suffix="+">0+</strong><span>Pengguna</span></div>
         </div>
       </div>
       <div class="grid-cards">
@@ -38,15 +51,6 @@
         <div class="card-image" style="background-image:url('images/Golden\ Lentil\ Soup.avif')"></div>
         <div class="card-image" style="background-image:url('images/Spicy\ Tofu\ Stir\ Fry.avif')"></div>
         <div class="card-image" style="background-image:url('images/Salmon.avif')"></div>
-      </div>
-    </div>
-  </section>
-
-  <section class="section">
-    <div class="container">
-      <div class="search-wrap">
-        <input type="text" placeholder="Cari resep, bahan, atau kategori..." />
-        <button class="btn btn-primary">Search</button>
       </div>
     </div>
   </section>
@@ -69,5 +73,46 @@
       <small>© 2026 Plantify. All rights reserved.</small>
     </div>
   </footer>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      // 1. ANIMASI COUNTER
+      const counters = document.querySelectorAll('.counter');
+      const speed = 30; 
+      counters.forEach(counter => {
+        const updateCount = () => {
+          const target = +counter.getAttribute('data-target');
+          const count = +counter.innerText.replace(/[^0-9]/g, '');
+          const suffix = counter.getAttribute('data-suffix') || '';
+          const inc = target / speed;
+          if (count < target) {
+            counter.innerText = Math.ceil(count + inc) + suffix;
+            setTimeout(updateCount, 40);
+          } else {
+            counter.innerText = target + suffix;
+          }
+        };
+        updateCount();
+      });
+
+      // 2. EFEK TOPBAR SHADOW SAAT SCROLLING
+      const topbar = document.getElementById('mainTopbar');
+      window.addEventListener('scroll', () => {
+        if (window.scrollY > 20) {
+          topbar.style.boxShadow = '0 4px 15px rgba(0,0,0,0.3)';
+        } else {
+          topbar.style.boxShadow = 'none';
+        }
+      });
+
+      // 3. KARTU RESEP DIKLIK (Simulasi mengarah ke recipes.html)
+      const recipeCards = document.querySelectorAll('.recipe-card');
+      recipeCards.forEach(card => {
+        card.addEventListener('click', () => {
+          window.location.href = 'recipes.html';
+        });
+      });
+    });
+  </script>
 </body>
 </html>

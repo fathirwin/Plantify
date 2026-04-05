@@ -41,7 +41,7 @@
           <span class="period">/ bulan</span>
         </div>
         
-        <button class="btn btn-outline-dark" style="width: 100%; margin-bottom: 32px;">Get Started Free</button>
+        <button id="btnBasic" class="btn btn-outline-dark" style="width: 100%; margin-bottom: 32px; transition: all 0.3s ease;">Get Started Free</button>
         
         <p class="features-label soft">WHAT'S INCLUDED</p>
         <ul class="features-list">
@@ -62,7 +62,7 @@
           <span class="period">/ bulan</span>
         </div>
         
-        <button class="btn btn-accent" style="width: 100%; margin-bottom: 32px;">Start 7-Day Free Trial</button>
+        <button id="btnPro" class="btn btn-accent" style="width: 100%; margin-bottom: 32px; transition: all 0.3s ease;">Start 7-Day Free Trial</button>
         
         <p class="features-label" style="color: #92bfa8;">EVERYTHING IN BASIC, PLUS:</p>
         <ul class="features-list">
@@ -83,5 +83,58 @@
       <small>© 2026 Plantify. All rights reserved.</small>
     </div>
   </footer>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const btnBasic = document.getElementById('btnBasic');
+      const btnPro = document.getElementById('btnPro');
+
+      // Fungsi interaktif untuk tombol Basic
+      if(btnBasic) {
+        btnBasic.addEventListener('click', function() {
+          const originalText = this.innerText;
+          
+          // Efek visual tombol diklik
+          this.innerText = "Processing...";
+          this.style.opacity = "0.7";
+          this.style.pointerEvents = "none"; // Mencegah double klik
+          
+          setTimeout(() => {
+            alert("Terima kasih telah memilih Plantify Basic! Mengarahkan ke halaman pendaftaran...");
+            window.location.href = "login.html"; // Mengarahkan ke login.html
+            
+            // Mengembalikan tombol ke keadaan semula (berjaga-jaga jika user kembali/back)
+            this.innerText = originalText;
+            this.style.opacity = "1";
+            this.style.pointerEvents = "auto";
+          }, 800);
+        });
+      }
+
+      // Fungsi interaktif untuk tombol Pro
+      if(btnPro) {
+        btnPro.addEventListener('click', function() {
+          const originalText = this.innerText;
+          
+          // Efek visual tombol diklik
+          this.innerText = "Setting up Trial...";
+          this.style.opacity = "0.8";
+          this.style.transform = "scale(0.98)";
+          this.style.pointerEvents = "none";
+          
+          setTimeout(() => {
+            alert("Luar biasa! Memulai 7-Day Free Trial untuk Plantify Pro. Mengarahkan ke halaman pendaftaran...");
+            window.location.href = "login.html"; // Mengarahkan ke login.html
+            
+            // Mengembalikan tombol ke keadaan semula
+            this.innerText = originalText;
+            this.style.opacity = "1";
+            this.style.transform = "scale(1)";
+            this.style.pointerEvents = "auto";
+          }, 1000);
+        });
+      }
+    });
+  </script>
 </body>
 </html>
