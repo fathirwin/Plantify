@@ -1,0 +1,302 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Plantify - Fresh Recommendations</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="topbar">
+    <div class="container inner">
+      <div class="brand">Plantify</div>
+      <nav class="nav">
+        <a href="index.html">Home</a>
+        <a href="recipes.html">Recipes</a>
+        <a href="pricing.html">Pricing</a>
+        <a class="btn btn-accent" href="login.html">Login</a>
+        <a href="user-dashboard.html">User Dashboard</a>
+        <a href="admin-dashboard.html">Admin Dashboard</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container section">
+    <div style="margin-bottom: 32px;">
+      <p style="letter-spacing: 1.5px; color: var(--accent); font-weight: 700; font-size: 13px; text-transform: uppercase; margin-bottom: 8px;">Explore</p>
+      <h1 style="font-size: clamp(36px, 4vw, 48px); margin: 0; font-family: 'Georgia', serif;">
+        Fresh Recommendations <span style="font-size: 20px; color: var(--muted); font-weight: 400; vertical-align: middle;">(16)</span>
+      </h1>
+    </div>
+
+    <div class="search-wrap" style="margin-bottom: 40px;">
+      <input type="text" id="searchInput" placeholder="Cari resep, bahan, atau kategori..." />
+      <button id="searchBtn" class="btn btn-primary">Search</button>
+    </div>
+
+    <div class="recipe-grid">
+      <article class="recipe-card">
+        <div class="card-img-wrap">
+          <span class="badge badge-easy">Easy</span>
+          <button class="btn-heart">♡</button>
+          <img src="images/Creamy Avocado Bowl.avif" alt="Creamy Avocado Bowl">
+        </div>
+        <div class="pad">
+          <h3 style="margin: 0 0 12px; font-size: 20px;">Creamy Avocado Bowl</h3>
+          <div class="tags">
+            <span class="tag">Lunch</span>
+            <span class="tag">High Protein</span>
+            <span class="tag">Gluten Free</span>
+          </div>
+          <div class="meta">
+            <span>⏱ 20 min</span>
+            <span>480 kcal</span>
+          </div>
+          <button onclick="openModal(this)" class="btn btn-primary" style="width: 100%;">View Recipe</button>
+        </div>
+      </article>
+
+      <article class="recipe-card">
+        <div class="card-img-wrap">
+          <span class="badge badge-easy">Medium</span>
+          <button class="btn-heart">♡</button>
+          <img src="images/Golden Lentil Soup.avif" alt="Golden Lentil Soup">
+        </div>
+        <div class="pad">
+          <h3 style="margin: 0 0 12px; font-size: 20px;">Golden Lentil Soup</h3>
+          <div class="tags">
+            <span class="tag">Lunch</span>
+            <span class="tag">Best Soup</span>
+          </div>
+          <div class="meta">
+            <span>⏱ 10 min</span>
+            <span>280 kcal</span>
+          </div>
+          <button onclick="openModal(this)" class="btn btn-primary" style="width: 100%;">View Recipe</button>
+        </div>
+      </article>
+
+      <article class="recipe-card">
+        <div class="card-img-wrap">
+          <span class="badge badge-medium">Hard</span>
+          <button class="btn-heart">♡</button>
+          <img src="images/Salmon.avif" alt="Roasted Salmon">
+        </div>
+        <div class="pad">
+          <h3 style="margin: 0 0 12px; font-size: 20px;">Roasted Salmon</h3>
+          <div class="tags">
+            <span class="tag">Dinner</span>
+            <span class="tag">Lunch</span>
+            <span class="tag">Gluten Free</span>
+          </div>
+          <div class="meta">
+            <span>⏱ 40 min</span>
+            <span>390 kcal</span>
+          </div>
+          <button onclick="openModal(this)" class="btn btn-primary" style="width: 100%;">View Recipe</button>
+        </div>
+      </article>
+
+      <article class="recipe-card">
+        <div class="card-img-wrap">
+          <span class="badge badge-easy">Easy</span>
+          <button class="btn-heart liked" style="color: red;">♥</button> 
+          <img src="images/Spicy Tofu Stir Fry.avif" alt="Spicy Tofu Stir Fry">
+        </div>
+        <div class="pad">
+          <h3 style="margin: 0 0 12px; font-size: 20px;">Spicy Tofu Stir Fry</h3>
+          <div class="tags">
+            <span class="tag">Dinner</span>
+            <span class="tag">Low Calorie</span>
+          </div>
+          <div class="meta">
+            <span>⏱ 30 min</span>
+            <span>210 kcal</span>
+          </div>
+          <button onclick="openModal(this)" class="btn btn-primary" style="width: 100%;">View Recipe</button>
+        </div>
+      </article>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="brand" style="font-size:36px;">Plantify</div>
+      <p>Making plant-based living simple, delicious, and sustainable.</p>
+      <small>© 2026 Plantify. All rights reserved.</small>
+    </div>
+  </footer>
+
+  <div id="recipeModal" class="modal-overlay">
+    <div class="modal-content">
+      <button class="modal-close" onclick="closeModal()">×</button>
+
+      <div class="modal-left">
+        <img id="modalImage" src="images/Creamy Avocado Bowl.avif" alt="Recipe Image">
+        
+        <div class="impact-badges">
+          <div class="impact-badge"><span style="color:#3b82f6; font-size: 16px;">💧</span> 520L Water Saved</div>
+          <div class="impact-badge"><span style="color:#22c55e; font-size: 16px;">🍃</span> 2.8kg CO₂ Reduced</div>
+        </div>
+      </div>
+
+      <div class="modal-right">
+        <div class="modal-scroll-area">
+          <h2 id="modalTitle" class="modal-title">Creamy Avocado Bowl</h2>
+          <div class="modal-tags">
+            <span class="badge-static badge-easy">Easy</span>
+            <span class="tag-static">⏱ 20 min</span>
+            <span class="tag-static" style="color: var(--accent); background: #fff0eb;">Lunch</span>
+            <span class="tag-static" style="color: var(--accent); background: #fff0eb;">High Protein</span>
+            <span class="tag-static" style="color: var(--accent); background: #fff0eb;">Gluten Free</span>
+          </div>
+
+          <div class="nutrition-grid">
+            <div class="nutri-box"><span class="val">480</span><br><span class="label">kcal<br>Calories</span></div>
+            <div class="nutri-box"><span class="val">18</span><span class="unit">g</span><br><span class="label">Protein</span></div>
+            <div class="nutri-box"><span class="val">52</span><span class="unit">g</span><br><span class="label">Carbs</span></div>
+            <div class="nutri-box"><span class="val">24</span><span class="unit">g</span><br><span class="label">Fat</span></div>
+          </div>
+
+          <div class="modal-tabs">
+            <button class="tab active" onclick="switchTab('ingredients')">Ingredients</button>
+            <button class="tab" onclick="switchTab('instructions')">Instructions</button>
+          </div>
+
+          <div id="ingredientsTab" style="display: block;">
+            <ul class="ingredient-list">
+              <li class="ingredient-item">
+                <div class="ing-left"><span class="radio-circle"></span> Avocado</div>
+                <div class="ing-right">1 large</div>
+              </li>
+              <li class="ingredient-item">
+                <div class="ing-left"><span class="radio-circle"></span> Brown rice</div>
+                <div class="ing-right">1 cup cooked</div>
+              </li>
+              <li class="ingredient-item">
+                <div class="ing-left"><span class="radio-circle"></span> Cherry tomatoes</div>
+                <div class="ing-right">1 cup</div>
+              </li>
+              <li class="ingredient-item">
+                <div class="ing-left"><span class="radio-circle"></span> Cucumber</div>
+                <div class="ing-right">1/2</div>
+              </li>
+              <li class="ingredient-item">
+                <div class="ing-left"><span class="radio-circle"></span> Chickpeas</div>
+                <div class="ing-right">1/2 cup</div>
+              </li>
+              <li class="ingredient-item">
+                <div class="ing-left"><span class="radio-circle"></span> Tahini</div>
+                <div class="ing-right">2 tbsp</div>
+              </li>
+              <li class="ingredient-item">
+                <div class="ing-left"><span class="radio-circle"></span> Lemon juice</div>
+                <div class="ing-right">1 tbsp</div>
+              </li>
+            </ul>
+          </div>
+
+          <div id="instructionsTab" style="display: none;">
+            <ol class="instruction-list">
+              <li>Cook brown rice according to package instructions and let cool slightly.</li>
+              <li>Halve the avocado, remove pit, and slice into thin pieces.</li>
+              <li>Halve cherry tomatoes and slice the cucumber.</li>
+              <li>Drain and rinse chickpeas from the can.</li>
+              <li>Mix tahini with lemon juice, a pinch of salt, and 2 tbsp water to make dressing.</li>
+              <li>Assemble the bowl: rice at the bottom, then arrange all toppings. Drizzle with tahini dressing.</li>
+            </ol>
+          </div>
+
+        </div>
+
+        <div class="modal-footer">
+          <button class="btn btn-accent" style="width: 100%; padding: 16px; font-size: 16px; font-weight: bold; border-radius: 8px;">+ Add to Meal Plan</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // 1. Search
+    document.getElementById('searchInput').addEventListener('input', function() {
+      const query = this.value.toLowerCase();
+      const recipes = document.querySelectorAll('.recipe-card');
+      
+      recipes.forEach(recipe => {
+        const title = recipe.querySelector('h3').innerText.toLowerCase();
+        if(title.includes(query)) {
+          recipe.style.display = 'block';
+        } else {
+          recipe.style.display = 'none';
+        }
+      });
+    });
+    // 2. FUNGSI MEMBUKA MODAL SECARA DINAMIS
+function openModal(buttonElement) {
+  const card = buttonElement.closest('.recipe-card');
+  const imgSrc = card.querySelector('img').src;
+  const title = card.querySelector('h3').innerText;
+
+  document.getElementById('modalImage').src = imgSrc;
+  document.getElementById('modalTitle').innerText = title;
+
+  // Reset tab ke Ingredients setiap kali modal dibuka
+  switchTab('ingredients');
+
+  document.getElementById('recipeModal').classList.add('active');
+  document.body.style.overflow = 'hidden'; 
+}
+
+// 3. FUNGSI MENUTUP MODAL
+function closeModal() {
+  document.getElementById('recipeModal').classList.remove('active');
+  document.body.style.overflow = 'auto'; 
+}
+
+// Tutup modal jika area gelap di luar box diklik
+window.onclick = function(event) {
+  let modal = document.getElementById('recipeModal');
+  if (event.target == modal) {
+    closeModal();
+  }
+}
+
+// 4. FUNGSI MENGGANTI TAB DI DALAM MODAL
+function switchTab(tabName) {
+  // Sembunyikan semua konten tab
+  document.getElementById('ingredientsTab').style.display = 'none';
+  document.getElementById('instructionsTab').style.display = 'none';
+  
+  // Hapus status 'active' dari semua tombol tab
+  const tabs = document.querySelectorAll('.modal-tabs .tab');
+  tabs.forEach(t => t.classList.remove('active'));
+
+  // Tampilkan konten yang dipilih dan set tombolnya menjadi active
+  document.getElementById(tabName + 'Tab').style.display = 'block';
+  if(tabName === 'ingredients') {
+    tabs[0].classList.add('active');
+  } else if (tabName === 'instructions') {
+    tabs[1].classList.add('active');
+  }
+}
+
+// 5. FUNGSI TOMBOL FAVORIT (HEART/LOVE)
+document.addEventListener('DOMContentLoaded', () => {
+  const heartBtns = document.querySelectorAll('.btn-heart');
+  
+  heartBtns.forEach(btn => {
+    btn.addEventListener('click', function() {
+      this.classList.toggle('liked');
+      if(this.classList.contains('liked')) {
+        this.innerHTML = '♥';
+      } else {
+        this.innerHTML = '♡';
+        this.style.color = 'var(--accent)'; // Kembalikan ke warna default jika unlike
+      }
+    });
+  });
+});
+  </script>
+  <script src="animations.js"></script>
+</body>
+</html>
