@@ -15,7 +15,7 @@
       <div style="margin-top: 16px; display: flex; flex-direction: column; gap: 8px; height: 100%;">
         <a class="side-link active" href="user-dashboard-Meal-Planner.html">Meal Planner</a>
         <a class="side-link" href="user-dashboard-chat.html">Consultation</a>
-        <a class="side-link" href="user-dashboard.html">Account</a>
+        <a class="side-link" href="user-dashboard-account.html">Account</a>
         <a class="side-link" href="index.html">Back to Home</a>
         
         <a class="side-link" style="margin-top: auto; color: var(--accent);" href="login.html">
@@ -35,41 +35,77 @@
         <article class="stat-box"><h2>7</h2><p class="soft">Meal Plan Days</p></article>
       </section>
 
-      <section class="split">
-        <div class="block">
-          <h3>Jadwal Makan Mingguan</h3>
-          <table>
-            <thead>
-              <tr>
-                <th>Hari</th>
-                <th>Breakfast</th>
-                <th>Lunch</th>
-                <th>Dinner</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr><td>Senin</td><td>Oatmeal Fruit Bowl</td><td>Quinoa Salad</td><td>Spicy Tofu Stir Fry</td></tr>
-              <tr><td>Selasa</td><td>Chia Pudding</td><td>Lentil Soup</td><td>Mushroom Pasta</td></tr>
-              <tr><td>Rabu</td><td>Green Smoothie</td><td>Chickpea Wrap</td><td>Veggie Curry</td></tr>
-              <tr><td>Kamis</td><td>Avocado Toast</td><td>Buddha Bowl</td><td>Sweet Potato Tacos</td></tr>
-            </tbody>
-          </table>
+      <section class="split planner-layout">
+
+      <!-- WEEKLY MEAL -->
+      <div class="block planner-box">
+        <div class="planner-head">
+          <h3>Weekly Impact Forecast</h3>
         </div>
-        
-        <div class="block">
-          <h3>Grocery List</h3>
-          <ul style="padding-left:20px; line-height:1.9; color: var(--text);">
-            <li>Firm tofu - 400g</li>
-            <li>Bell peppers - 2 pcs</li>
-            <li>Broccoli - 2 cups</li>
-            <li>Jasmine rice - 1.5 cups</li>
-            <li>Soy sauce - 3 sdm</li>
-            <li>Avocado - 3 pcs</li>
-            <li>Rolled oats - 500g</li>
-          </ul>
-          <button class="btn btn-primary" style="width:100%; margin-top: 16px;">Print List</button>
+
+        <div class="meal-grid">
+
+          <!-- HEADER -->
+          <div></div>
+          <div class="day-title">MON <span>Apr 20</span></div>
+          <div class="day-title">TUE <span>Apr 21</span></div>
+          <div class="day-title">WED <span>Apr 22</span></div>
+          <div class="day-title">THU <span>Apr 23</span></div>
+          <div class="day-title">FRI <span>Apr 24</span></div>
+          <div class="day-title">SAT <span>Apr 25</span></div>
+          <div class="day-title">SUN <span>Apr 26</span></div>
+
+          <!-- BREAKFAST -->
+          <div class="meal-label">BREAKFAST</div>
+          <div class="meal-slot add-slot"></div>
+          <div class="meal-slot add-slot"></div>
+          <div class="meal-slot add-slot"></div>
+          <div class="meal-slot add-slot"></div>
+          <div class="meal-slot add-slot"></div>
+          <div class="meal-slot add-slot"></div>
+          <div class="meal-slot add-slot"></div>
+
+          <!-- LUNCH -->
+          <div class="meal-label">LUNCH</div>
+          <div class="meal-slot add-slot"></div>
+          <div class="meal-slot add-slot"></div>
+          <div class="meal-slot add-slot"></div>
+          <div class="meal-slot add-slot"></div>
+          <div class="meal-slot add-slot"></div>
+          <div class="meal-slot add-slot"></div>
+          <div class="meal-slot add-slot"></div>
+
+          <!-- DINNER -->
+          <div class="meal-label">DINNER</div>
+          <div class="meal-slot add-slot"></div>
+          <div class="meal-slot add-slot"></div>
+          <div class="meal-slot add-slot"></div>
+          <div class="meal-slot add-slot"></div>
+          <div class="meal-slot add-slot"></div>
+          <div class="meal-slot add-slot"></div>
+          <div class="meal-slot add-slot"></div>
+
         </div>
-      </section>
+      </div>
+
+      <!-- GROCERY -->
+      <div class="block grocery-box">
+        <h3>Grocery List</h3>
+
+        <ul class="grocery-list">
+          <li><span class="circle-check"></span>Avocado</li>
+          <li><span class="circle-check"></span>Cherry tomatoes</li>
+          <li><span class="circle-check"></span>Cucumber</li>
+          <li><span class="circle-check"></span>Lemon juice</li>
+          <li><span class="circle-check"></span>Onion</li>
+          <li><span class="circle-check"></span>Garlic</li>
+          <li><span class="circle-check"></span>Brown rice</li>
+          <li><span class="circle-check"></span>Chickpeas</li>
+          <li><span class="circle-check"></span>Tahini</li>
+        </ul>
+      </div>
+
+    </section>
 
       <section class="block" style="margin-top:18px;">
       <h3>Form Tambah Resep</h3>

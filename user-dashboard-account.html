@@ -3,20 +3,19 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Plantify - Admin Account</title>
+  <title>Plantify - Account Settings</title>
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
   <div class="panel">
     <aside class="sidebar">
       <div class="brand" style="font-size:34px;">Plantify</div>
-      <span class="soft" style="font-size: 13px; letter-spacing: 1px;">ADMIN PANEL</span>
+      <span class="soft" style="font-size: 13px; letter-spacing: 1px;">USER PANEL</span>
       
       <div style="margin-top: 16px; display: flex; flex-direction: column; gap: 8px; height: 100%;">
-        <a class="side-link" href="admin-dashboard-recipes.html">Recipes</a>
-        <a class="side-link" href="admin-dashboard-subscription.html">Subscriptions</a>
-        <a class="side-link" href="admin-dashboard-chat.html">Chat</a>
-        <a class="side-link active" href="admin-dashboard.html">Account</a>
+        <a class="side-link" href="user-dashboard-Meal-Planner.html">Meal Planner</a>
+        <a class="side-link" href="user-dashboard-chat.html">Consultation</a>
+        <a class="side-link active" href="user-dashboard-account.html">Account</a>
         <a class="side-link" href="index.html">Back to Home</a>
         
         <a class="side-link" style="margin-top: auto; color: var(--accent);" href="login.html">
@@ -30,26 +29,28 @@
       <h1 style="font-size:52px; margin-top:6px; margin-bottom: 24px;">Account Settings</h1>
 
       <section class="split">
+        
         <div class="block">
           <h3>Profile Information</h3>
-          <p class="soft" style="margin-top: -10px; margin-bottom: 20px;">Perbarui data diri dan status hak akses kamu di sini.</p>
+          <p class="soft" style="margin-top: -10px; margin-bottom: 20px;">Perbarui data diri dan preferensi diet kamu di sini.</p>
           
           <form class="form-layout">
             <div class="field full">
               <label>Nama Lengkap</label>
-              <input type="text" value="Dr. Sumanto Dragon" />
+              <input type="text" value="Sugeng" />
             </div>
             
             <div class="field full">
               <label>Alamat Email</label>
-              <input type="email" value="SDragon@plantify.com" />
+              <input type="email" value="sugenk@gmail.com" />
             </div>
             
             <div class="field full">
-              <label>Status Peran</label>
+              <label>Preferensi Diet</label>
               <select>
-                <option value="admin">Administrator</option>
-                <option value="nutritionist" selected>Ahli Gizi (Nutritionist)</option>
+                <option value="vegan">Vegan (100% Plant-based)</option>
+                <option value="vegetarian" selected>Vegetarian (Includes dairy/eggs)</option>
+                <option value="flexitarian">Flexitarian (Mostly plant-based)</option>
               </select>
             </div>
             
@@ -60,6 +61,7 @@
         </div>
 
         <div style="display: flex; flex-direction: column; gap: 16px;">
+          
           <div class="block">
             <h3>Change Password</h3>
             <form class="form-layout">
@@ -76,6 +78,13 @@
               </div>
             </form>
           </div>
+
+          <div class="block" style="border: 1px solid #f8c8c8; background: #fffcfc;">
+            <h3 style="color: #bd2c2c; margin-top: 0;">Danger Zone</h3>
+            <p class="soft" style="font-size: 14px; margin-bottom: 16px;">Jika kamu menghapus akun, semua data jadwal makan dan resep favoritmu akan hilang permanen.</p>
+            <button class="btn" style="background: #fff0f0; color: #bd2c2c; width: 100%; border: 1px solid #f8c8c8;">Delete Account</button>
+          </div>
+
         </div>
       </section>
     </main>

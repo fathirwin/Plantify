@@ -1,79 +1,177 @@
 <!doctype html>
 <html lang="id">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Plantify - Admin Subscriptions</title>
-  <link rel="stylesheet" href="styles.css" />
-</head>
-<body>
-  <div class="panel">
-    <aside class="sidebar">
-      <div class="brand" style="font-size:34px;">Plantify</div>
-      <span class="soft" style="font-size: 13px; letter-spacing: 1px;">ADMIN PANEL</span>
-      
-      <div style="margin-top: 16px; display: flex; flex-direction: column; gap: 8px; height: 100%;">
-        <a class="side-link" href="admin-dashboard-recipes.html">Recipes</a>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Plantify - Admin Subscriptions</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  </head>
+  <body>
+    <div class="panel">
+      <aside class="sidebar">
+        <div class="brand" style="font-size: 34px">Plantify</div>
+        <span class="soft" style="font-size: 13px; letter-spacing: 1px"
+          >ADMIN PANEL</span
+        >
+
+        <div
+          style="
+            margin-top: 16px;
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+            height: 100%;
+          "
+        >
         <a class="side-link active" href="admin-dashboard-subscription.html">Subscriptions</a>
+        <a class="side-link" href="admin-dashboard-recipes.html">Recipes</a>
         <a class="side-link" href="admin-dashboard-chat.html">Chat</a>
-        <a class="side-link" href="admin-dashboard.html">Account</a>
+        <a class="side-link" href="admin-dashboard-account.html">Account</a>
         <a class="side-link" href="index.html">Back to Home</a>
-        
-        <a class="side-link" style="margin-top: auto; color: var(--accent);" href="login.html">
-          <strong>Logout</strong>
-        </a>
-      </div>
-    </aside>
 
-    <main class="content">
-      <p style="letter-spacing:1.5px; color:var(--accent); font-weight:700; margin-bottom: 0;">USER MANAGEMENT</p>
-      <h1 style="font-size:52px; margin-top:6px; margin-bottom: 24px;">Pro Subscribers</h1>
+          <a
+            class="side-link"
+            style="margin-top: auto; color: var(--accent)"
+            href="login.html"
+          >
+            <strong>Logout</strong>
+          </a>
+        </div>
+      </aside>
 
-      <div class="stat-grid" style="margin-bottom: 24px;">
-        <article class="stat-box"><h2>1,240</h2><p class="soft">Total Pro Users</p></article>
-        <article class="stat-box"><h2>Rp 73M</h2><p class="soft">Monthly Revenue</p></article>
-        <article class="stat-box"><h2>+45</h2><p class="soft">New Users this week</p></article>
-      </div>
+      <main class="content">
+        <p
+          style="
+            letter-spacing: 1.5px;
+            color: var(--accent);
+            font-weight: 700;
+            margin-bottom: 0;
+          "
+        >
+          PLATFORM ANALYTICS
+        </p>
 
-      <div class="block">
-        <h3>Active Pro Users</h3>
-        <table>
-          <thead>
-            <tr>
-              <th>User Name</th>
-              <th>Email</th>
-              <th>Join Date</th>
-              <th>Status</th>
-              <th>Action</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>Sugeng</td>
-              <td>Sugeng@gmail.com</td>
-              <td>12 Mar 2026</td>
-              <td><span class="status-badge status-active">Active</span></td>
-              <td><a href="#" style="color: var(--primary);">View Profile</a></td>
-            </tr>
-            <tr>
-              <td>Yatno</td>
-              <td>y444tno@yahoo.com</td>
-              <td>10 Mar 2026</td>
-              <td><span class="status-badge status-active">Active</span></td>
-              <td><a href="#" style="color: var(--primary);">View Profile</a></td>
-            </tr>
-            <tr>
-              <td>Samson</td>
-              <td>samsonss@outlook.com</td>
-              <td>05 Mar 2026</td>
-              <td><span class="status-badge status-expired">Expired</span></td>
-              <td><a href="#" style="color: var(--primary);">View Profile</a></td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-    </main>
-  </div>
-  <script src="animations.js"></script>
-</body>
+        <h1 style="font-size: 52px; margin-top: 6px; margin-bottom: 24px">
+          Plantify Premium Dashboard
+        </h1>
+
+        <!-- TOP STATS -->
+        <section class="stat-grid" style="margin-bottom: 22px">
+          <article class="stat-box">
+            <h2>12,480</h2>
+            <p class="soft">Website Visitors</p>
+          </article>
+
+          <article class="stat-box">
+            <h2>1,248</h2>
+            <p class="soft">Premium Subscribers</p>
+          </article>
+
+          <article class="stat-box">
+            <h2>4,962</h2>
+            <p class="soft">Recipes Viewed</p>
+          </article>
+
+          <article class="stat-box">
+            <h2>Rp73M</h2>
+            <p class="soft">Monthly Revenue</p>
+          </article>
+        </section>
+
+        <!-- MAIN -->
+        <section class="split">
+          <!-- LEFT -->
+          <div style="display: flex; flex-direction: column; gap: 14px">
+            <div class="block">
+              <h3>User Traffic Trend</h3>
+              <canvas id="visitorChart" height="110"></canvas>
+            </div>
+
+            <div class="block">
+              <h3>Subscription Growth</h3>
+              <canvas id="subChart" height="110"></canvas>
+            </div>
+
+            <div class="block">
+              <h3>Most Viewed Recipes</h3>
+
+              <table>
+                <tr>
+                  <th>Recipe</th>
+                  <th>Views</th>
+                  <th>Category</th>
+                </tr>
+
+                <tr>
+                  <td>Golden Lentil Soup</td>
+                  <td>1,248</td>
+                  <td>Lunch</td>
+                </tr>
+
+                <tr>
+                  <td>Spicy Tofu Stir Fry</td>
+                  <td>1,090</td>
+                  <td>Dinner</td>
+                </tr>
+
+                <tr>
+                  <td>Roasted Salmon</td>
+                  <td>980</td>
+                  <td>Dinner</td>
+                </tr>
+
+                <tr>
+                  <td>Avocado Toast</td>
+                  <td>902</td>
+                  <td>Breakfast</td>
+                </tr>
+              </table>
+            </div>
+          </div>
+
+          <!-- RIGHT -->
+          <div style="display: flex; flex-direction: column; gap: 14px">
+            <div class="block">
+              <h3>User Device Access</h3>
+              <canvas id="deviceChart" height="220"></canvas>
+            </div>
+
+            <div class="block">
+              <h3>Popular Categories</h3>
+              <canvas id="categoryChart" height="220"></canvas>
+            </div>
+          </div>
+        </section>
+
+        <!-- LOWER -->
+        <section class="block" style="margin-top: 18px">
+          <h3>Business Performance</h3>
+
+          <div class="stat-grid">
+            <article class="stat-box">
+              <h2>84%</h2>
+              <p class="soft">Returning Users</p>
+            </article>
+
+            <article class="stat-box">
+              <h2>5m 24s</h2>
+              <p class="soft">Avg Session Time</p>
+            </article>
+
+            <article class="stat-box">
+              <h2>327</h2>
+              <p class="soft">New Users This Week</p>
+            </article>
+
+            <article class="stat-box">
+              <h2>91%</h2>
+              <p class="soft">User Satisfaction</p>
+            </article>
+          </div>
+        </section>
+      </main>
+    </div>
+    <script src="animations.js"></script>
+  </body>
 </html>
